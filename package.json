@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Портфолио веб-разработчика Frontend",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "sass styles/main.scss styles/main.css",
+    "watch-css": "sass --watch styles/main.scss styles/main.css"
+  },
+  "keywords": ["portfolio", "frontend", "web-developer"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
+

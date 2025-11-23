@@ -114,7 +114,7 @@ if (contactForm) {
     // Initialize EmailJS
     const PUBLIC_KEY = "QpL0CK0RhrRLALLHP"; // Public Key
     const SERVICE_ID = "service_eftexan"; // Service ID
-    const TEMPLATE_ID = "template_wsxenji"; // Template ID
+    const TEMPLATE_ID = "template_712l7qa"; // Template ID
 
     // Проверка настройки
     if (PUBLIC_KEY === "YOUR_PUBLIC_KEY") {

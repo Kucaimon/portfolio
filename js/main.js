@@ -112,7 +112,7 @@ if (contactForm) {
     );
   } else {
     // Initialize EmailJS
-    const PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // ⚠️ ЗАМЕНИТЕ на ваш Public Key из EmailJS
+    const PUBLIC_KEY = "QpL0CK0RhrRLALLHP"; // Public Key
     const SERVICE_ID = "service_eftexan"; // Service ID
     const TEMPLATE_ID = "template_wsxenji"; // Template ID
 

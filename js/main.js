@@ -104,51 +104,93 @@ const animateOnScroll = () => {
 
 // Contact form handling with EmailJS
 const contactForm = document.getElementById("contactForm");
-if (contactForm && typeof emailjs !== "undefined") {
-  // Initialize EmailJS
-  emailjs.init("YOUR_PUBLIC_KEY"); // Замените на ваш Public Key из EmailJS
 
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+if (contactForm) {
+  if (typeof emailjs === "undefined") {
+    console.error(
+      "EmailJS не загружен. Проверьте подключение библиотеки в index.html"
+    );
+  } else {
+    // Initialize EmailJS
+    const PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // ⚠️ ЗАМЕНИТЕ на ваш Public Key из EmailJS
+    const SERVICE_ID = "service_eftexan"; // Service ID
+    const TEMPLATE_ID = "template_wsxenji"; // Template ID
 
-    // Показываем индикатор загрузки
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    submitButton.textContent = "Отправка...";
-    submitButton.disabled = true;
+    // Проверка настройки
+    if (PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
+      console.error("⚠️ EmailJS не настроен! Укажите Public Key в js/main.js");
+    } else {
+      emailjs.init(PUBLIC_KEY);
+    }
 
-    // Получаем данные формы
-    const formData = new FormData(contactForm);
-    const templateParams = {
-      from_name: formData.get("name"),
-      from_email: formData.get("email"),
-      message: formData.get("message"),
-      to_email: "gosha19982306@gmail.com",
-    };
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-    // Отправляем через EmailJS
-    emailjs
-      .send(
-        "service_eftexan", // Service ID
-        "YOUR_TEMPLATE_ID", // Замените на ваш Template ID
-        templateParams
-      )
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        alert("Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.");
-        contactForm.reset();
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-      })
-      .catch((error) => {
-        console.error("FAILED...", error);
+      // Проверка настройки перед отправкой
+      if (PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
         alert(
-          "Произошла ошибка при отправке. Попробуйте еще раз или свяжитесь со мной напрямую через email: gosha19982306@gmail.com"
+          "Форма еще не настроена. Укажите Public Key в js/main.js\n\nИли свяжитесь напрямую: gosha19982306@gmail.com"
         );
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-      });
-  });
+        return;
+      }
+
+      // Показываем индикатор загрузки
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      submitButton.textContent = "Отправка...";
+      submitButton.disabled = true;
+
+      // Получаем данные формы
+      const formData = new FormData(contactForm);
+      const templateParams = {
+        from_name: formData.get("name"),
+        from_email: formData.get("email"),
+        message: formData.get("message"),
+        to_email: "gosha19982306@gmail.com",
+      };
+
+      // Отправляем через EmailJS
+      emailjs
+        .send(SERVICE_ID, TEMPLATE_ID, templateParams)
+        .then((response) => {
+          console.log("✅ SUCCESS!", response.status, response.text);
+          alert(
+            "Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время."
+          );
+          contactForm.reset();
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        })
+        .catch((error) => {
+          console.error("❌ ОШИБКА отправки:", error);
+          let errorMessage = "Произошла ошибка при отправке.\n\n";
+
+          // Более детальные сообщения об ошибках
+          if (error.text) {
+            if (error.text.includes("Invalid Public Key")) {
+              errorMessage +=
+                "Ошибка: Неверный Public Key. Проверьте настройки EmailJS.";
+            } else if (error.text.includes("Invalid Service ID")) {
+              errorMessage +=
+                "Ошибка: Неверный Service ID. Проверьте настройки EmailJS.";
+            } else if (error.text.includes("Invalid Template ID")) {
+              errorMessage +=
+                "Ошибка: Неверный Template ID. Проверьте настройки EmailJS.";
+            } else {
+              errorMessage += `Ошибка: ${error.text}`;
+            }
+          } else {
+            errorMessage += "Проверьте консоль браузера (F12) для деталей.";
+          }
+
+          errorMessage += "\n\nИли свяжитесь напрямую: gosha19982306@gmail.com";
+
+          alert(errorMessage);
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        });
+    });
+  }
 }
 
 // Initialize animations on page load

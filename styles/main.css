@@ -223,6 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav__logo-img {
   height: 40px;
   width: auto;
+  filter: invert(1) brightness(1.2);
 }
 
 .nav__menu {
@@ -971,6 +972,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer__logo-img {
   height: 40px;
   width: auto;
+  filter: invert(1) brightness(1.2);
 }
 
 .footer__nav-title {

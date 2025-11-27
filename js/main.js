@@ -42,10 +42,10 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > 100) {
-    nav.style.background = "rgba(251, 248, 204, 0.98)";
-    nav.style.boxShadow = "0 2px 10px rgba(3, 4, 94, 0.1)";
+    nav.style.background = "rgba(10, 10, 10, 0.98)";
+    nav.style.boxShadow = "0 2px 20px rgba(0, 255, 65, 0.1)";
   } else {
-    nav.style.background = "rgba(251, 248, 204, 0.95)";
+    nav.style.background = "rgba(10, 10, 10, 0.95)";
     nav.style.boxShadow = "none";
   }
 

@@ -487,6 +487,13 @@ p {
   color: var(--color-text-secondary);
 }
 
+.skill-card__description {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
 .skill-card__bar {
   height: 8px;
   background: var(--color-bg-secondary);

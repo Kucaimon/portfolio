@@ -282,7 +282,7 @@ a:hover {
 .nav__logo-img {
   height: 50px;
   width: auto;
-  filter: drop-shadow(0 0 8px var(--color-glow));
+  filter: invert(1) drop-shadow(0 0 8px var(--color-glow));
 }
 
 .nav__menu {
@@ -1159,7 +1159,7 @@ a:hover {
 .footer__logo-img {
   height: 50px;
   width: auto;
-  filter: drop-shadow(0 0 8px var(--color-glow));
+  filter: invert(1) drop-shadow(0 0 8px var(--color-glow));
 }
 
 @media (max-width: 768px) {

@@ -282,7 +282,7 @@ a {
   &__logo-img {
     height: 50px;
     width: auto;
-    filter: drop-shadow(0 0 8px var(--color-glow));
+    filter: invert(1) drop-shadow(0 0 8px var(--color-glow));
   }
 
   &__menu {
@@ -1113,7 +1113,7 @@ a {
   &__logo-img {
     height: 50px;
     width: auto;
-    filter: drop-shadow(0 0 8px var(--color-glow));
+    filter: invert(1) drop-shadow(0 0 8px var(--color-glow));
 
     @media (max-width: 768px) {
       height: 40px;

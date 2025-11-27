@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
@@ -50,16 +50,31 @@
     <section class="hero" id="hero">
       <div class="container">
         <div class="hero__content">
+          <p class="hero__badge">Frontend Developer</p>
           <h1 class="hero__title">
-            Привет — я <span class="hero__name">Георгий</span>
+            Создаю <span class="hero__gradient">цифровые продукты</span> которые работают на результат
           </h1>
-          <p class="hero__subtitle">Веб-алхимик интерфейсов</p>
           <p class="hero__description">
-            Я превращаю идею в опыт, код — в восприятие, дизайн — в смысл.
+            Разрабатываю современные веб-приложения и сайты с фокусом на 
+            пользовательский опыт, производительность и конверсию.
           </p>
           <div class="hero__cta">
-            <a href="#projects" class="btn btn--primary">Мои проекты</a>
-            <a href="#contacts" class="btn btn--secondary">Связаться</a>
+            <a href="#projects" class="btn btn--primary">Смотреть проекты</a>
+            <a href="#contacts" class="btn btn--secondary">Обсудить проект</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-value">8+</span>
+              <span class="hero__stat-label">Проектов</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-value">2+</span>
+              <span class="hero__stat-label">Года опыта</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-value">React</span>
+              <span class="hero__stat-label">Стек</span>
+            </div>
           </div>
         </div>
       </div>
@@ -68,7 +83,10 @@
     <!-- About Section -->
     <section class="about" id="about">
       <div class="container">
-        <h2 class="section__title">Обо мне</h2>
+        <div class="about__header">
+          <p class="section__label">Обо мне</p>
+          <h2 class="section__title">Партнёр, который понимает ваш продукт</h2>
+        </div>
         <div class="about__content">
           <div class="about__image">
             <img
@@ -79,134 +97,109 @@
           </div>
           <div class="about__text">
             <p>
-              Я не просто frontend-разработчик. Я создаю цифровые пространства, 
-              в которых пользователи находят ответы — не потому что я «нажал кнопку», 
-              а потому что интерфейс сказал им это сам.
+              Специализируюсь на создании современных веб-приложений и сайтов 
+              с использованием React, TypeScript и современного стека технологий.
             </p>
             <p>
-              Мой путь — от классической верстки к мощным фреймворкам, от шаблона 
-              к смыслу. Работая с React, TypeScript, SCSS-сетками и Git-ветками, 
-              я стремлюсь к чистоте кода… и чистоте восприятия.
+              Понимаю бизнес-задачи клиента и трансформирую их в технические 
+              решения, которые приносят измеримый результат: увеличение конверсии, 
+              улучшение пользовательского опыта, повышение скорости загрузки.
             </p>
             <p>
-              Я не гонюсь за трендами. Я их направляю. Иду по краю технологий 
-              сегодня, чтобы завтра вы могли засиять сильнее.
+              Работаю с быстрыми циклами обратной связи, обеспечивая прозрачность 
+              процесса разработки на каждом этапе.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <!-- Services Section -->
+    <section class="services" id="skills">
       <div class="container">
-        <h2 class="section__title">Навыки</h2>
-        <div class="skills__grid">
-          <div class="skill-card">
-            <div class="skill-card__header">
-              <div class="skill-card__title-wrapper">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="HTML5"
-                  class="skill-card__icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  alt="CSS3"
-                  class="skill-card__icon"
-                />
-                <h3 class="skill-card__title">HTML / CSS</h3>
-              </div>
-              <span class="skill-card__percent">95%</span>
+        <div class="services__header">
+          <p class="section__label">Услуги</p>
+          <h2 class="section__title">Полный цикл frontend-разработки</h2>
+          <p class="section__subtitle">
+            От концепции до запуска — обеспечиваю качественный результат на каждом этапе
+          </p>
+        </div>
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <p class="skill-card__description">Чистая сетка, адаптив, семантика.</p>
-            <div class="skill-card__bar">
-              <div class="skill-card__progress" data-percent="95"></div>
-            </div>
+            <h3 class="service-card__title">Веб-разработка</h3>
+            <p class="service-card__description">
+              Создание быстрых, адаптивных сайтов и веб-приложений с использованием 
+              современных технологий: React, TypeScript, Vite.
+            </p>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__header">
-              <div class="skill-card__title-wrapper">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                  class="skill-card__icon"
-                />
-                <h3 class="skill-card__title">JavaScript</h3>
-              </div>
-              <span class="skill-card__percent">90%</span>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M9 9H15M9 12H15M9 15H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
             </div>
-            <p class="skill-card__description">Логика, анимации, интерактивность.</p>
-            <div class="skill-card__bar">
-              <div class="skill-card__progress" data-percent="90"></div>
-            </div>
+            <h3 class="service-card__title">Вёрстка макетов</h3>
+            <p class="service-card__description">
+              Pixel-perfect вёрстка из Figma, Adobe XD. Семантичная структура, 
+              кроссбраузерность, адаптивность для всех устройств.
+            </p>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__header">
-              <div class="skill-card__title-wrapper">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React"
-                  class="skill-card__icon"
-                />
-                <h3 class="skill-card__title">React</h3>
-              </div>
-              <span class="skill-card__percent">85%</span>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
             </div>
-            <p class="skill-card__description">Компоненты, состояние, производительность.</p>
-            <div class="skill-card__bar">
-              <div class="skill-card__progress" data-percent="85"></div>
-            </div>
+            <h3 class="service-card__title">Оптимизация</h3>
+            <p class="service-card__description">
+              Улучшение производительности существующих сайтов: скорость загрузки, 
+              SEO-оптимизация, повышение конверсии.
+            </p>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__header">
-              <div class="skill-card__title-wrapper">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  alt="TypeScript"
-                  class="skill-card__icon"
-                />
-                <h3 class="skill-card__title">TypeScript</h3>
-              </div>
-              <span class="skill-card__percent">80%</span>
+        </div>
+        <div class="skills__tech">
+          <p class="skills__tech-label">Технологии</p>
+          <div class="skills__tech-grid">
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+              <span>React</span>
             </div>
-            <p class="skill-card__description">Типы не мешают креативу — они его защищают.</p>
-            <div class="skill-card__bar">
-              <div class="skill-card__progress" data-percent="80"></div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+              <span>TypeScript</span>
             </div>
-          </div>
-          <div class="skill-card">
-            <div class="skill-card__header">
-              <div class="skill-card__title-wrapper">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                  alt="SASS"
-                  class="skill-card__icon"
-                />
-                <h3 class="skill-card__title">SCSS / SASS</h3>
-              </div>
-              <span class="skill-card__percent">90%</span>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+              <span>JavaScript</span>
             </div>
-            <p class="skill-card__description">Модульность, темы, лёгкость поддержки.</p>
-            <div class="skill-card__bar">
-              <div class="skill-card__progress" data-percent="90"></div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+              <span>HTML5</span>
             </div>
-          </div>
-          <div class="skill-card">
-            <div class="skill-card__header">
-              <div class="skill-card__title-wrapper">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  alt="Git"
-                  class="skill-card__icon"
-                />
-                <h3 class="skill-card__title">Git</h3>
-              </div>
-              <span class="skill-card__percent">85%</span>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+              <span>CSS3</span>
             </div>
-            <p class="skill-card__description">История проекта — это рассказ. Я веду его аккуратно.</p>
-            <div class="skill-card__bar">
-              <div class="skill-card__progress" data-percent="85"></div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SASS" />
+              <span>SCSS</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              <span>Git</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" />
+              <span>Vite</span>
             </div>
           </div>
         </div>
@@ -216,7 +209,13 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
       <div class="container">
-        <h2 class="section__title">Проекты</h2>
+        <div class="projects__header">
+          <p class="section__label">Портфолио</p>
+          <h2 class="section__title">Реализованные проекты</h2>
+          <p class="section__subtitle">
+            Каждый проект — это результат глубокого погружения в задачу клиента
+          </p>
+        </div>
         <div class="projects__grid">
           <div class="project-card">
             <div class="project-card__image">
@@ -230,9 +229,8 @@
                 Alageum Logistics Presentation
               </h3>
               <p class="project-card__description">
-                Коммерческий проект: интерактивная веб-презентация отчёта за 
-                I полугодие 2025. Навигация между слайдами, живые графики, 
-                данные компании — всё работает как механизм.
+                Интерактивная веб-презентация корпоративного отчёта. Навигация 
+                между слайдами, динамические графики, визуализация данных.
               </p>
               <div class="project-card__tags">
                 <span class="tag">HTML</span>
@@ -267,9 +265,8 @@
                 «Эстетика Лица» — Салон красоты
               </h3>
               <p class="project-card__description">
-                Сайт премиум-салона в Геленджике. Каталог услуг, галерея, 
-                отзывы, контакты — дизайн и код подчинены одной цели: 
-                вызвать доверие.
+                Корпоративный сайт премиум-салона. Каталог услуг, галерея работ, 
+                система отзывов, интеграция с картами.
               </p>
               <div class="project-card__tags">
                 <span class="tag">HTML</span>
@@ -304,9 +301,8 @@
                 Lumiere — Салон красоты и косметологии
               </h3>
               <p class="project-card__description">
-                Одностраничник премиум-сегмента: услуги, мастера, онлайн-запись. 
-                Каркас готов к натяжке на CMS — видно, что проект рассчитан 
-                на масштаб.
+                Landing page премиум-сегмента с адаптивным дизайном. 
+                Подготовлен к интеграции с CMS для управления контентом.
               </p>
               <div class="project-card__tags">
                 <span class="tag">HTML</span>
@@ -341,8 +337,8 @@
                 Geekshop — Демо-магазин товаров для гиков
               </h3>
               <p class="project-card__description">
-                Учебный проект: каталог, корзина, электронная коммерция. 
-                React + Vite, чтобы было быстро и современно.
+                E-commerce платформа на React. Каталог товаров, корзина покупок, 
+                система фильтрации, адаптивный интерфейс.
               </p>
               <div class="project-card__tags">
                 <span class="tag">React</span>
@@ -377,8 +373,8 @@
                 Станок РВД — Платформа для заказа оборудования
               </h3>
               <p class="project-card__description">
-                Крупный коммерческий проект: каталог, система заказов, 
-                доставка по всей России — всё под контролем.
+                B2B-платформа для промышленного оборудования. Каталог продукции, 
+                система заказов, калькулятор доставки.
               </p>
               <div class="project-card__tags">
                 <span class="tag">HTML</span>
@@ -413,7 +409,8 @@
                 ZenSound — Сайт приложения для медитации
               </h3>
               <p class="project-card__description">
-                Демо-сайт: функции, отзывы, тарифы — дизайн, который дышит.
+                Landing page мобильного приложения. Презентация функций, 
+                тарифные планы, блок отзывов пользователей.
               </p>
               <div class="project-card__tags">
                 <span class="tag">HTML</span>
@@ -448,8 +445,8 @@
                 DevGuide — Каталог по веб-разработке
               </h3>
               <p class="project-card__description">
-                Учебный каталог: информация, навигация, ресурсы. Помогает 
-                разобраться в мире разработки — как ты разбираешь карты.
+                Справочный портал для разработчиков. Структурированная навигация, 
+                категоризация материалов, поиск по ресурсам.
               </p>
               <div class="project-card__tags">
                 <span class="tag">React</span>
@@ -484,8 +481,8 @@
                 TechNova — Интернет-магазин электроники
               </h3>
               <p class="project-card__description">
-                Современный интернет-магазин на React: каталог товаров, корзина, 
-                фильтрация и адаптивный дизайн. Быстро, удобно, по-современному.
+                Интернет-магазин электроники на React. Каталог с фильтрацией, 
+                корзина, карточки товаров, современный UI.
               </p>
               <div class="project-card__tags">
                 <span class="tag">React</span>
@@ -515,18 +512,22 @@
     <!-- Experience Section -->
     <section class="experience" id="experience">
       <div class="container">
-        <h2 class="section__title">Опыт и образование</h2>
+        <div class="experience__header">
+          <p class="section__label">Опыт</p>
+          <h2 class="section__title">Профессиональный путь</h2>
+        </div>
         <div class="experience__content">
           <div class="experience__section">
             <h3 class="experience__section-title">Опыт работы</h3>
             <div class="timeline">
               <div class="timeline__item">
-                <div class="timeline__date">2024–2025</div>
+                <div class="timeline__date">2024 — настоящее время</div>
                 <div class="timeline__content">
                   <h4 class="timeline__title">Frontend Developer</h4>
-                  <p class="timeline__company">Самозанятость</p>
+                  <p class="timeline__company">Freelance</p>
                   <p class="timeline__description">
-                    Разработка коммерческих веб-сайтов и приложений — от идеи до запуска.
+                    Разработка коммерческих веб-проектов для клиентов из различных 
+                    отраслей. Полный цикл: от анализа требований до запуска и поддержки.
                   </p>
                 </div>
               </div>
@@ -536,12 +537,12 @@
             <h3 class="experience__section-title">Образование</h3>
             <div class="timeline">
               <div class="timeline__item">
-                <div class="timeline__date">2024 год</div>
+                <div class="timeline__date">2024</div>
                 <div class="timeline__content">
                   <h4 class="timeline__title">Frontend Developer</h4>
-                  <p class="timeline__company">Сертификат</p>
+                  <p class="timeline__company">Профессиональная сертификация</p>
                   <p class="timeline__description">
-                    Получен сертификат по специальности Frontend Developer.
+                    Сертификат по специальности Frontend Developer.
                   </p>
                   <div class="timeline__certificate">
                     <img
@@ -553,12 +554,13 @@
                 </div>
               </div>
               <div class="timeline__item">
-                <div class="timeline__date">2020–2024</div>
+                <div class="timeline__date">2020 — 2024</div>
                 <div class="timeline__content">
-                  <h4 class="timeline__title">Самообучение</h4>
-                  <p class="timeline__company">Верстка и Frontend-разработка</p>
+                  <h4 class="timeline__title">Профессиональное развитие</h4>
+                  <p class="timeline__company">Самообразование</p>
                   <p class="timeline__description">
-                    Сделано много, изучено ещё больше.
+                    Углублённое изучение веб-технологий, практика на реальных проектах, 
+                    освоение современных фреймворков и инструментов разработки.
                   </p>
                 </div>
               </div>
@@ -571,16 +573,15 @@
     <!-- Contacts Section -->
     <section class="contacts" id="contacts">
       <div class="container">
-        <h2 class="section__title">Контакты</h2>
+        <div class="contacts__header">
+          <p class="section__label">Контакты</p>
+          <h2 class="section__title">Давайте обсудим ваш проект</h2>
+        </div>
         <div class="contacts__content">
           <div class="contacts__info">
             <p class="contacts__text">
-              Есть идея? Проект? Или просто хотите пообщаться о том, как 
-              интерфейс может работать <strong>иначе</strong>?
-            </p>
-            <p class="contacts__text">
-              Свяжитесь со мной — и мы создадим пространство, которое будет 
-              не просто работать, а <strong>чувствоваться</strong>.
+              Готов обсудить ваш проект и предложить оптимальное решение. 
+              Свяжитесь удобным способом — отвечу в течение 24 часов.
             </p>
             <div class="contacts__social">
               <a

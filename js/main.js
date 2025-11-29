@@ -6,6 +6,7 @@ if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     navToggle.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
   });
 }
 
@@ -15,6 +16,7 @@ navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("active");
     navToggle.classList.remove("active");
+    document.body.classList.remove("menu-open");
   });
 });
 

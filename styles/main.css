@@ -72,6 +72,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 ::selection {
   background: var(--color-primary);
   color: var(--color-white);
@@ -246,10 +250,15 @@ h1, h2, h3, h4, h5, h6 {
     gap: 32px;
     transform: translateX(-100%);
     transition: var(--transition);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
   }
   
   .nav__menu.active {
     transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -280,6 +289,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   padding: 8px;
   z-index: 1001;
+  position: relative;
 }
 
 @media (max-width: 768px) {
